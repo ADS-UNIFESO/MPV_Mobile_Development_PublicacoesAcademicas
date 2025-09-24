@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.2rem;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #0066cc;
+            font-size: 1.3rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        header p {
+            word-break: break-word;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 8px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+            section {
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Estilo para o menu fixo */
+        #menu-superior {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #006b64;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        #menu-superior ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        #menu-superior ul li {
+            margin: 0 1.5rem;
+        }
+
+        #menu-superior a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Superior Fixo -->
+    <div id="menu-superior">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/ultimos-artigos">Últimos Artigos</a></li>
+        <li><a href="/todos-artigos">Todos os Artigos</a></li>
+        <li><a href="/cadastro-artigo">Cadastrar Artigo</a></li>
+        <li><a href="/first-access">Primeiro Acesso</a></li>
+        <li><a href="/cadastro-colaborador">Cadastro Colaborador</a></li>
+      </ul>
+    </div>
+
+    <header>
+        <h1>Seu Nome</h1>
+        <p>Endereço | Cidade, Estado | Telefone | E-mail</p>
+    </header>
+
+    <section>
+        <h2>Resumo</h2>
+        <p>Um breve resumo sobre você e suas habilidades.</p>
+    </section>
+
+    <section>
+        <h2>Experiência Profissional</h2>
+        <ul>
+            <li>
+                <strong>Nome da Empresa</strong> - Cargo<br>
+                <em>Período de Trabalho</em><br>
+                Descrição das responsabilidades e realizações.
+            </li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Educação</h2>
+        <ul>
+            <li>
+                <strong>Nome da Instituição</strong> - Curso<br>
+                <em>Período de Estudo</em><br>
+                Grau obtido e outras informações relevantes.
+            </li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Habilidade 1</li>
+            <li>Habilidade 2</li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Idiomas</h2>
+        <ul>
+            <li>Idioma 1 - Nível de Proficiência</li>
+            <li>Idioma 2 - Nível de Proficiência</li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Referências</h2>
+        <p>Disponíveis mediante solicitação.</p>
+    </section>
+
+</body>
+</html>

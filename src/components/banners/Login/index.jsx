@@ -89,53 +89,78 @@ export default function MaxWidthDialogLogin({ type }) {
         onClose={handleClose}
       >
         <Components.Container>
+          {window.innerWidth <= 600 ? (
+            signIn ? (
+              <Components.Form onSubmit={handleLogin}>
+                <Components.Title>LOGIN</Components.Title>
+                <Components.Input type='email' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                <Components.Input type='password' placeholder='Senha' value={password} onChange={e => setPassword(e.target.value)} />
+                <Components.Anchor href='#'>Esqueceu sua senha?</Components.Anchor>
+                {error && <span style={{color: 'red', fontSize: '14px'}}>{error}</span>}
+                <Components.Button type='submit'>ENTRAR</Components.Button>
+                <Components.GhostButton type='button' onClick={() => toggle(false)}>
+                  Cadastre-se
+                </Components.GhostButton>
+              </Components.Form>
+            ) : (
+              <Components.Form>
+                <Components.Title>Criar Conta</Components.Title>
+                <Components.Input type='text' placeholder='Nome' />
+                <Components.Input type='email' placeholder='Email' />
+                <Components.Input type='password' placeholder='Senha' />
+                <Components.Button>Cadastrar</Components.Button>
+                <Components.GhostButton type='button' onClick={() => toggle(true)}>
+                  Voltar para Login
+                </Components.GhostButton>
+              </Components.Form>
+            )
+          ) : (
+            // ...existing code for desktop layout...
+            <>
               <Components.SignUpContainer signinIn={signIn}>
-                  <Components.Form>
-                      <Components.Title>Criar Conta</Components.Title>
-                      <Components.Input type='text' placeholder='Nome' />
-                      <Components.Input type='email' placeholder='Email' />
-                      <Components.Input type='password' placeholder='Senha' />
-                      <Components.Button>Cadastrar</Components.Button>
-                  </Components.Form>
+                <Components.Form>
+                  <Components.Title>Criar Conta</Components.Title>
+                  <Components.Input type='text' placeholder='Nome' />
+                  <Components.Input type='email' placeholder='Email' />
+                  <Components.Input type='password' placeholder='Senha' />
+                  <Components.Button>Cadastrar</Components.Button>
+                </Components.Form>
               </Components.SignUpContainer>
-
               <Components.SignInContainer signinIn={signIn}>
-                   <Components.Form onSubmit={handleLogin}>
-                       <Components.Title>LOGIN</Components.Title>
-                       <Components.Input type='email' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
-                       <Components.Input type='password' placeholder='Senha' value={password} onChange={e => setPassword(e.target.value)} />
-                       <Components.Anchor href='#'>Esqueceu sua senha?</Components.Anchor>
-                       {error && <span style={{color: 'red', fontSize: '14px'}}>{error}</span>}
-                       <Components.Button type='submit'>ENTRAR</Components.Button>
-                   </Components.Form>
+                <Components.Form onSubmit={handleLogin}>
+                  <Components.Title>LOGIN</Components.Title>
+                  <Components.Input type='email' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                  <Components.Input type='password' placeholder='Senha' value={password} onChange={e => setPassword(e.target.value)} />
+                  <Components.Anchor href='#'>Esqueceu sua senha?</Components.Anchor>
+                  {error && <span style={{color: 'red', fontSize: '14px'}}>{error}</span>}
+                  <Components.Button type='submit'>ENTRAR</Components.Button>
+                </Components.Form>
               </Components.SignInContainer>
-
               <Components.OverlayContainer signinIn={signIn}>
-                  <Components.Overlay signinIn={signIn}>
-
+                <Components.Overlay signinIn={signIn}>
                   <Components.LeftOverlayPanel signinIn={signIn}>
-                      <Components.Title2>Bem vindo de volta!</Components.Title2>
-                      <Components.Paragraph>
-                        Para se manter conectado conosco, faça login com suas informações pessoais
-                      </Components.Paragraph>
-                      <Components.GhostButton onClick={() => toggle(true)}>
-                        Entrar
-                      </Components.GhostButton>
-                      </Components.LeftOverlayPanel>
-
-                      <Components.RightOverlayPanel signinIn={signIn}>
-                        <Components.Title2>Olá, Amigo!</Components.Title2>
-                        <Components.Paragraph>
-                          Insira seus dados pessoais e comece a jornada conosco
-                        </Components.Paragraph>
-                            <Components.GhostButton onClick={() => toggle(false)}>
-                                Cadastre-se
-                            </Components.GhostButton> 
-                      </Components.RightOverlayPanel>
-  
-                  </Components.Overlay>
+                    <Components.Title2>Bem vindo de volta!</Components.Title2>
+                    <Components.Paragraph>
+                      Para se manter conectado conosco, faça login com suas informações pessoais
+                    </Components.Paragraph>
+                    <Components.GhostButton onClick={() => toggle(true)}>
+                      Entrar
+                    </Components.GhostButton>
+                  </Components.LeftOverlayPanel>
+                  <Components.RightOverlayPanel signinIn={signIn}>
+                    <Components.Title2>Olá, Amigo!</Components.Title2>
+                    <Components.Paragraph>
+                      Insira seus dados pessoais e comece a jornada conosco
+                    </Components.Paragraph>
+                    <Components.GhostButton onClick={() => toggle(false)}>
+                      Cadastre-se
+                    </Components.GhostButton>
+                  </Components.RightOverlayPanel>
+                </Components.Overlay>
               </Components.OverlayContainer>
-          </Components.Container>
+            </>
+          )}
+        </Components.Container>
           </Dialog>
       {filteredBanner.map((banner) => (
         <section className={styles.page}>

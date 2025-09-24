@@ -1,3 +1,15 @@
+ .hamburger {
+   display: none;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   position: fixed;
+   top: 12px;
+   right: 16px;
+   z-index: 2000;
+   background: rgba(0,0,0,0.01);
+   border: none;
+ }
 .menu {
   position: fixed;
   top: 0;
@@ -9,12 +21,43 @@
 }
 .menu ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 0;
 }
+/* Responsivo: menu hamburger */
+@media (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    background: #006b64;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1001;
+    display: none;
+  }
+  .menu ul.open {
+    display: flex !important;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  }
+  .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    margin: 6px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
 .menu li {
   margin: 0 1.5rem;
 }
@@ -27,4 +70,57 @@
 }
 .menu a:hover {
   color: #00bfae;
+}
+
+
+@media (max-width: 600px) {
+  .menu {
+    position: static;
+    box-shadow: none;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    display: none !important;
+    display: block;
+    background: #006b64;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1001;
+  }
+  .menu ul.open {
+    display: flex !important;
+  }
+  .menu li {
+    margin: 0.5rem 0;
+  }
+  .menu a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    z-index: 1100;
+  }
+  .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    margin: 6px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
 }

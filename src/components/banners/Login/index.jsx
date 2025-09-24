@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useAuth } from '../../../auth/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import * as Components from './Components';
 import styles from "./styles.module.css";
@@ -63,10 +64,16 @@ export default function MaxWidthDialogLogin({ type }) {
   const [error, setError] = React.useState("");
   const navigate = useNavigate();
 
+  const { login } = useAuth();
   function handleLogin(e) {
     e.preventDefault();
+  
     if (email === "aluno@teste.com" && password === "123") {
       setError("");
+
+      const fakeToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
+  console.log('JWT gerado:', fakeToken);
+  login(fakeToken);
       setOpen(false);
       navigate("/home");
     } else {

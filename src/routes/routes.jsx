@@ -6,12 +6,14 @@ import FirstAccess from "pages/FirstAccess";
 import CadastroArtigo from "../pages/Artigos/Cadastro";
 import UltimosArtigos from "../pages/Artigos/Ultimos";
 import TodosArtigos from "../pages/Artigos/Todos";
+import { AuthProvider } from '../auth/AuthContext';
+import PrivateRoute from '../auth/PrivateRoute';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Rola a página para o topo quando a rota muda
+  window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
@@ -19,42 +21,39 @@ function ScrollToTop() {
 
 export default function AppRoutes() {
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<FirstAccess pageId='loginPage' />} />
-          <Route
-            path='/home'
-            element={<Home pageId='homePage' />}
-          >
-            <Route
-              index
-              element={<Home />}
-            />
-          </Route>
-          <Route
-            path='/login'
-            element={<FirstAccess pageId='loginPage' />}
-          />
-          <Route
-            path='/cadastro-artigo'
-            element={<CadastroArtigo />}
-          />
-          <Route
-            path='/ultimos-artigos'
-            element={<UltimosArtigos />}
-          />
-          <Route
-            path='/todos-artigos'
-            element={<TodosArtigos />}
-          />
-          <Route
-            path='/cadastro-colaborador'
-            element={<CadastroColaborador />}
-          />
+          <Route path='/login' element={<FirstAccess pageId='loginPage' />} />
+          <Route path='/home' element={
+            <PrivateRoute>
+              <Home pageId='homePage' />
+            </PrivateRoute>
+          } />
+          <Route path='/cadastro-artigo' element={
+            <PrivateRoute>
+              <CadastroArtigo />
+            </PrivateRoute>
+          } />
+          <Route path='/ultimos-artigos' element={
+            <PrivateRoute>
+              <UltimosArtigos />
+            </PrivateRoute>
+          } />
+          <Route path='/todos-artigos' element={
+            <PrivateRoute>
+              <TodosArtigos />
+            </PrivateRoute>
+          } />
+          <Route path='/cadastro-colaborador' element={
+            <PrivateRoute>
+              <CadastroColaborador />
+            </PrivateRoute>
+          } />
         </Routes>
       </BrowserRouter>
-    </>
+    </AuthProvider>
   );
 }

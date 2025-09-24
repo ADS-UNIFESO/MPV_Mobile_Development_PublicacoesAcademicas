@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 import MenuSuperior from "components/MenuSuperior";
 
-// Lista dos periódicos reais
 const periodicos = [
   {
     titulo: "Revista de Medicina Veterinária do Unifeso",

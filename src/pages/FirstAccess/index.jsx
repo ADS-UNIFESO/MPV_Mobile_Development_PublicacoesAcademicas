@@ -23,7 +23,6 @@ export default function FirstAccess({ pageId }) {
   ];
   return (
     <>
-      <MenuSuperior />
       <section className={styles.main}>
         <MainBanner
           type={filteredBanner("Main", true, false, "anchorHome")}

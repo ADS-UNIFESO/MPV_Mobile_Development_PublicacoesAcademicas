@@ -57,6 +57,34 @@
   max-width: 50%;
 }
 
+@media (max-width: 600px) {
+  .page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  .imageBox {
+    width: 100vw;
+    height: 180px;
+    min-height: 120px;
+    background-position: center;
+  }
+  .content {
+    width: 100vw;
+    padding: 16px;
+    gap: 24px;
+  }
+  .welcome {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+  }
+  .cards {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .a {
   color: #303468;
   font-size: 16px;

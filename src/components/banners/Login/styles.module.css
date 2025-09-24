@@ -6,6 +6,30 @@
   height: 100vh;
 }
 
+@media (max-width: 600px) {
+  .page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  .imageBox {
+    width: 100vw;
+    height: 180px;
+    min-height: 120px;
+    background-position: center;
+  }
+  .content {
+    width: 100vw;
+    padding: 16px;
+    gap: 24px;
+  }
+  .welcome {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+  }
+}
+
 .imageBox {
   width: 40vw;
   height: 100%;

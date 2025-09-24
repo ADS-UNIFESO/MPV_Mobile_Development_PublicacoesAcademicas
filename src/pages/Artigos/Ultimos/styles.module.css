@@ -7,6 +7,44 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+@media (max-width: 600px) {
+  .container {
+    max-width: 100vw;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .cadastroBtn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    word-break: break-word;
+    text-align: left;
+  }
+  .artigoCard {
+    padding: 10px;
+    font-size: 1.08rem;
+    word-break: break-word;
+    line-height: 1.4;
+  }
+  .artigoCard img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 6px;
+  }
+  .listaArtigos {
+    gap: 12px;
+  }
+}
+
 .cadastroBtn {
   background: #008F85;
   color: #fff;

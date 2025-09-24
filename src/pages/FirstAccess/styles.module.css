@@ -6,6 +6,14 @@
   height: auto;
 }
 
+@media (max-width: 600px) {
+  .main {
+    padding: 0 8px;
+    min-height: 100vh;
+    background-size: cover;
+  }
+}
+
 @media (max-width: 900px) {
   .main {
     padding: 0 16px;

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MenuSuperior from "../../components/MenuSuperior";
+
 import styles from "./styles.module.css";
 
 export default function Home() {
   return (
     <>
-      <MenuSuperior />
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <img src="https://www.unifeso.edu.br/editora/images/logo.png" alt="Editora Unifeso" className={styles.logo} />

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-import MenuSuperior from "../../../components/MenuSuperior";
+
 
 // Lista dos periódicos reais
 const periodicos = [
@@ -77,7 +77,7 @@ export default function TodosArtigos() {
 
   return (
     <>
-      <MenuSuperior />
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <button className={styles.cadastroBtn} onClick={() => navigate("/artigos/cadastro")}>Cadastrar Novo Artigo</button>

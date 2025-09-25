@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import MenuSuperior from "../../../components/MenuSuperior";
+
 
 const periodicos = [
   {
@@ -100,7 +100,7 @@ const todosArtigos = [
 export default function UltimosArtigos() {
   return (
     <>
-      <MenuSuperior />
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>ÚLTIMOS ARTIGOS</h2>

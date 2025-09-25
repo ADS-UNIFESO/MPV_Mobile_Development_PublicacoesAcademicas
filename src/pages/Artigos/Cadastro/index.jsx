@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import MenuSuperior from "../../../components/MenuSuperior";
+
 
 export default function CadastroArtigo() {
   const [titulo, setTitulo] = useState("");
@@ -20,7 +20,7 @@ export default function CadastroArtigo() {
 
   return (
     <>
-      <MenuSuperior />
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <h2>Cadastro de Novo Artigo</h2>

@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #006b64;
+  background: #008F85;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
@@ -57,7 +57,7 @@
     display: block;
     height: 4px;
     width: 100%;
-    background: #fff;
+    background: #333;
     margin: 6px 0;
     border-radius: 2px;
     transition: 0.3s;
@@ -68,7 +68,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0.5rem 1rem;
-    background: #006b64;
+    background: #008F85;
     position: absolute;
     top: 48px;
     left: 0;

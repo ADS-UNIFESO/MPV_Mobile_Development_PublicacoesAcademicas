@@ -4,7 +4,7 @@ import React from "react";
 import unifesoData from "../../assets/json/unifesoData.json";
 import MainBanner from "../../components/banners/Main";
 import Login from "../../components/banners/Login";
-import MenuSuperior from "../../components/MenuSuperior";
+
 
 export default function FirstAccess({ pageId }) {
   const filteredId = unifesoData.find((data) => data.id === pageId);
@@ -23,7 +23,7 @@ export default function FirstAccess({ pageId }) {
   ];
   return (
     <>
-      <MenuSuperior />
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <MainBanner

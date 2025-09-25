@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "../pages/Home";
 import CadastroColaborador from "../pages/Colaborador/CadastroColaborador";
-import FirstAccess from "pages/FirstAccess";
+import FirstAccess from "../pages/FirstAccess";
 import CadastroArtigo from "../pages/Artigos/Cadastro";
 import UltimosArtigos from "../pages/Artigos/Ultimos";
 import TodosArtigos from "../pages/Artigos/Todos";
 import { AuthProvider } from '../auth/AuthContext';
 import PrivateRoute from '../auth/PrivateRoute';
+import Layout from "../components/Layout";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,27 +30,37 @@ export default function AppRoutes() {
           <Route path='/login' element={<FirstAccess pageId='loginPage' />} />
           <Route path='/home' element={
             <PrivateRoute>
-              <Home pageId='homePage' />
+              <Layout>
+                <Home pageId='homePage' />
+              </Layout>
             </PrivateRoute>
           } />
           <Route path='/cadastro-artigo' element={
             <PrivateRoute>
-              <CadastroArtigo />
+              <Layout>
+                <CadastroArtigo />
+              </Layout>
             </PrivateRoute>
           } />
           <Route path='/ultimos-artigos' element={
             <PrivateRoute>
-              <UltimosArtigos />
+              <Layout>
+                <UltimosArtigos />
+              </Layout>
             </PrivateRoute>
           } />
           <Route path='/todos-artigos' element={
             <PrivateRoute>
-              <TodosArtigos />
+              <Layout>
+                <TodosArtigos />
+              </Layout>
             </PrivateRoute>
           } />
           <Route path='/cadastro-colaborador' element={
             <PrivateRoute>
-              <CadastroColaborador />
+              <Layout>
+                <CadastroColaborador />
+              </Layout>
             </PrivateRoute>
           } />
         </Routes>

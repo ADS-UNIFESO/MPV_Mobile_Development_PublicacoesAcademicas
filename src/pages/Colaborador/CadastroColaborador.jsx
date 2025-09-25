@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MenuSuperior from "../../components/MenuSuperior";
+
 import styles from "./styles.module.css";
 
 export default function CadastroColaborador() {
@@ -19,7 +19,7 @@ export default function CadastroColaborador() {
 
   return (
     <>
-      <MenuSuperior />
+      
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>Cadastro de Colaborador</h2>

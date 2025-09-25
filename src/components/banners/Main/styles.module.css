@@ -9,16 +9,6 @@
   background-size: 100%;
 }
 
-@media (max-width: 600px) {
-  .main {
-    flex-direction: column;
-    padding: 0 8px;
-    padding-top: 56px;
-    min-height: 60vh;
-    background-size: cover;
-  }
-}
-
 @media (max-width: 900px) {
   .main {
     flex-direction: column;
@@ -29,8 +19,10 @@
 
 @media (max-width: 600px) {
   .main {
+    flex-direction: column;
     padding: 0 8px;
     padding-top: 56px;
     min-height: 60vh;
+    background-size: cover;
   }
 }

@@ -1,9 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-import MainBanner from "components/banners/Main";
-import InfosBanner from "components/banners/Infos";
-import MenuSuperior from "components/MenuSuperior";
+import MenuSuperior from "../../../components/MenuSuperior";
 
 // Lista dos periódicos reais
 const periodicos = [
@@ -77,45 +75,23 @@ const periodicos = [
 export default function TodosArtigos() {
   const navigate = useNavigate();
 
-  let bannersData = null;
-  try {
-    // eslint-disable-next-line
-    bannersData = require("assets/json/unifesoData.json").find((data) => data.id === "homePage");
-  } catch (e) {
-    bannersData = null;
-  }
-  const filteredBanner = (type, background, revertPosition, anchor) =>
-    bannersData
-      ? [
-          bannersData,
-          bannersData.banners.filter((banner) => banner.type === type),
-          background,
-          revertPosition,
-          anchor,
-        ]
-      : null;
-
   return (
     <>
       <MenuSuperior />
-      {bannersData && (
-        <>
-          <MainBanner type={filteredBanner("Main", true, false, "anchorHome")} />
-          <InfosBanner type={filteredBanner("Infos", false, true, "anchorHome")} />
-        </>
-      )}
       <div className={styles.container}>
-        <button className={styles.cadastroBtn} onClick={() => navigate("/cadastro-artigo")}>Cadastrar Novo Artigo</button>
-        <h2 style={{textAlign: 'center', color: '#006b64', fontWeight: 'bold', marginBottom: '24px'}}>TODOS OS ARTIGOS</h2>
-        <ul className={styles.listaArtigos}>
-          {periodicos.map((periodico, idx) => (
-            <li key={idx} className={styles.artigoCard} style={{background: '#f6f6f6', borderRadius: '8px', padding: '18px', marginBottom: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-              <h3 style={{color: '#006b64', fontWeight: 'bold', fontSize: '2rem', margin: '0 0 8px 0'}}>{periodico.titulo}</h3>
-              <p style={{fontSize: '1.1rem', margin: '0 0 8px 0'}}>{periodico.descricao}</p>
-              <a href={periodico.link} target="_blank" rel="noopener noreferrer" style={{color: '#008F85', fontWeight: 'bold', fontSize: '1rem'}}>Acessar periódico</a>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.content}>
+          <button className={styles.cadastroBtn} onClick={() => navigate("/artigos/cadastro")}>Cadastrar Novo Artigo</button>
+          <h2 className={styles.title}>TODOS OS ARTIGOS</h2>
+          <ul className={styles.listaArtigos}>
+            {periodicos.map((periodico, idx) => (
+              <li key={idx} className={styles.artigoCard}>
+                <h3>{periodico.titulo}</h3>
+                <p>{periodico.descricao}</p>
+                <a href={periodico.link} target="_blank" rel="noopener noreferrer">Acessar periódico</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

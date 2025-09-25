@@ -3,8 +3,8 @@ import { useAuth } from '../../../auth/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import * as Components from './Components';
 import styles from "./styles.module.css";
-import backgroundImage from "assets/images/firstAcessBackground.png";
-import tempLogoCard from "assets/images/tempLogo.svg";
+import backgroundImage from "../../../assets/images/firstAcessBackground.png";
+import tempLogoCard from "../../../assets/images/tempLogo.svg";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -18,7 +18,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Switch from '@mui/material/Switch';
-import MenuSuperior from "components/MenuSuperior";
+import MenuSuperior from "../../../components/MenuSuperior";
 
 const UserCard = ({ children, onClick }) => {
   return (
@@ -96,7 +96,7 @@ export default function MaxWidthDialogLogin({ type }) {
                 <Components.Input type='email' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
                 <Components.Input type='password' placeholder='Senha' value={password} onChange={e => setPassword(e.target.value)} />
                 <Components.Anchor href='#'>Esqueceu sua senha?</Components.Anchor>
-                {error && <span style={{color: 'red', fontSize: '14px'}}>{error}</span>}
+                {error && <span className={styles.error}>{error}</span>}
                 <Components.Button type='submit'>ENTRAR</Components.Button>
                 <Components.GhostButton type='button' onClick={() => toggle(false)}>
                   Cadastre-se
@@ -132,7 +132,7 @@ export default function MaxWidthDialogLogin({ type }) {
                   <Components.Input type='email' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
                   <Components.Input type='password' placeholder='Senha' value={password} onChange={e => setPassword(e.target.value)} />
                   <Components.Anchor href='#'>Esqueceu sua senha?</Components.Anchor>
-                  {error && <span style={{color: 'red', fontSize: '14px'}}>{error}</span>}
+                  {error && <span className={styles.error}>{error}</span>}
                   <Components.Button type='submit'>ENTRAR</Components.Button>
                 </Components.Form>
               </Components.SignInContainer>
@@ -164,7 +164,7 @@ export default function MaxWidthDialogLogin({ type }) {
           </Dialog>
       {filteredBanner.map((banner) => (
         <section className={styles.page}>
-          <image
+          <div
             className={styles.imageBox}
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
@@ -191,6 +191,3 @@ export default function MaxWidthDialogLogin({ type }) {
     </React.Fragment>
   );
 }
-
-
-

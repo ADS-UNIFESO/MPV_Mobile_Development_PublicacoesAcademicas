@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import MenuSuperior from "components/MenuSuperior";
+import MenuSuperior from "../../../components/MenuSuperior";
 
 const periodicos = [
   {
@@ -102,23 +102,25 @@ export default function UltimosArtigos() {
     <>
       <MenuSuperior />
       <div className={styles.container}>
-        <h2 style={{textAlign: 'center', color: '#006b64', fontWeight: 'bold', marginBottom: '24px'}}>ÚLTIMOS ARTIGOS</h2>
-        <ul className={styles.listaArtigos} style={{listStyle: 'none', padding: 0}}>
-          {todosArtigos.map((artigo, idx) => (
-            <li key={idx} className={styles.artigoCard} style={{display: 'flex', alignItems: 'flex-start', background: '#f6f6f6', borderRadius: '8px', padding: '18px', marginBottom: '32px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-              {artigo.imagem && (
-                <img src={artigo.imagem} alt={artigo.titulo} style={{width: '180px', height: 'auto', marginRight: '32px', borderRadius: '4px', boxShadow: '0 2px 8px rgba(0,0,0,0.10)'}} />
-              )}
-              <div>
-                <h3 style={{color: '#008F85', fontWeight: 'bold', fontSize: '2rem', margin: '0 0 8px 0'}}>{artigo.titulo}</h3>
-                <p style={{fontSize: '1.1rem', margin: '0'}}>{artigo.descricao}</p>
-                {artigo.link && (
-                  <a href={artigo.link} target="_blank" rel="noopener noreferrer" style={{color: '#008F85', fontWeight: 'bold', fontSize: '1rem'}}>Acessar periódico</a>
+        <div className={styles.content}>
+          <h2 className={styles.title}>ÚLTIMOS ARTIGOS</h2>
+          <ul className={styles.listaArtigos}>
+            {todosArtigos.map((artigo, idx) => (
+              <li key={idx} className={styles.artigoCard}>
+                {artigo.imagem && (
+                  <img src={artigo.imagem} alt={artigo.titulo} />
                 )}
-              </div>
-            </li>
-          ))}
-        </ul>
+                <div>
+                  <h3>{artigo.titulo}</h3>
+                  <p>{artigo.descricao}</p>
+                  {artigo.link && (
+                    <a href={artigo.link} target="_blank" rel="noopener noreferrer">Acessar periódico</a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

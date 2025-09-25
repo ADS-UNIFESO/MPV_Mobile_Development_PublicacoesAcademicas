@@ -1,105 +1,9 @@
-@media (max-width: 600px) {
-  [class*='SignInContainer'], [class*='SignUpContainer'] {
-    position: static !important;
-    width: 100vw !important;
-    left: 0 !important;
-    height: auto !important;
-    opacity: 1 !important;
-    z-index: 2 !important;
-    transform: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #fff !important;
-    box-shadow: none !important;
-    transition: none !important;
-  }
-}
 .page {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
-}
-
-@media (max-width: 600px) {
-  .SignInContainer, .SignUpContainer {
-    width: 100vw !important;
-    min-width: unset !important;
-    padding: 0 !important;
-    display: none !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff !important;
-    box-shadow: none !important;
-  }
-  .SignInContainer.active, .SignUpContainer.active {
-    display: flex !important;
-  }
-  .OverlayContainer, .RightOverlayPanel, .LeftOverlayPanel, .welcome {
-    display: none !important;
-  }
-  .GhostButton {
-    display: block !important;
-    width: 100%;
-    margin: 12px 0 0 0;
-    font-size: 1rem;
-    padding: 12px 0;
-    background: #008F85;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .Form {
-    width: 100vw !important;
-    max-width: 340px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fff;
-    box-shadow: none;
-    border-radius: 0;
-  }
-  .Title {
-    font-size: 1.5rem !important;
-    text-align: center;
-    margin-bottom: 12px;
-    word-break: break-word;
-  }
-  input, button {
-    font-size: 1rem !important;
-    padding: 12px 8px !important;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-  }
-  .page {
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-  }
-  .imageBox {
-    width: 100vw;
-    height: 180px;
-    min-height: 120px;
-    background-position: center;
-  }
-  .content {
-    width: 100vw;
-    padding: 16px;
-    gap: 24px;
-  }
-  .welcome {
-    max-width: 100%;
-    width: 100%;
-    text-align: left;
-  }
 }
 
 .imageBox {
@@ -153,34 +57,6 @@
   max-width: 50%;
 }
 
-@media (max-width: 600px) {
-  .page {
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-  }
-  .imageBox {
-    width: 100vw;
-    height: 180px;
-    min-height: 120px;
-    background-position: center;
-  }
-  .content {
-    width: 100vw;
-    padding: 16px;
-    gap: 24px;
-  }
-  .welcome {
-    max-width: 100%;
-    width: 100%;
-    text-align: left;
-  }
-  .cards {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
 .a {
   color: #303468;
   font-size: 16px;
@@ -216,47 +92,119 @@
   width: 66px;
   height: 66px;
   border-radius: 66px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .imageBox {
+    width: 100vw;
+    height: 180px;
+    min-height: 120px;
+    background-position: center;
+  }
+
   .content {
+    width: 100vw;
+    padding: 16px;
+    gap: 24px;
+  }
+
+  .welcome {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+  }
+
+  .cards {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  [class*='SignInContainer'], [class*='SignUpContainer'] {
+    position: static !important;
+    width: 100vw !important;
+    left: 0 !important;
+    height: auto !important;
+    opacity: 1 !important;
+    z-index: 2 !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  .SignInContainer, .SignUpContainer {
+    width: 100vw !important;
+    min-width: unset !important;
+    padding: 0 !important;
+    display: none !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    padding: 16px;
-    gap: 12px;
+    background: #fff !important;
+    box-shadow: none !important;
   }
-  .SignInContainer, .SignUpContainer {
-    width: 100% !important;
-    min-width: unset !important;
-    padding: 0 !important;
+
+  .SignInContainer.active, .SignUpContainer.active {
+    display: flex !important;
+  }
+
+  .OverlayContainer, .RightOverlayPanel, .LeftOverlayPanel, .welcome {
+    display: none !important;
+  }
+
+  .GhostButton {
+    display: block !important;
+    width: 100%;
+    margin: 12px 0 0 0;
+    font-size: 1rem;
+    padding: 12px 0;
+    background: #008F85;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .Form {
+    width: 100vw !important;
+    max-width: 340px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 0;
   }
-  .OverlayContainer, .RightOverlayPanel, .LeftOverlayPanel {
-    display: none !important;
+
+  .Title {
+    font-size: 1.5rem !important;
+    text-align: center;
+    margin-bottom: 12px;
+    word-break: break-word;
   }
-  .welcome {
-    display: none !important;
-  }
+
   input, button {
     font-size: 1rem !important;
     padding: 12px 8px !important;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 8px;
-  }
-  .Title {
-    font-size: 1.5rem !important;
-    text-align: center;
-    margin-bottom: 12px;
-  }
-  .Form {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }

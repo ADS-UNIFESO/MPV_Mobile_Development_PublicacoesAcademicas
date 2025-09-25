@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   background-color: var(--unifeso-backgroundColor);
   scroll-behavior: smooth;
+}
 
 *,
 *:before,
@@ -43,7 +44,6 @@ html {
     font-size: 15px;
     padding: 0;
   }
-}
 }
 
 head {
@@ -140,4 +140,19 @@ a {
 }
 
 @media (max-width: 480px) {
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding: 36px 0;
+  }
+  .desktopOnly {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobileOnly {
+    display: none;
+  }
 }

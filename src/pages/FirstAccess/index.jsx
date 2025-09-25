@@ -1,10 +1,10 @@
 import styles from "./styles.module.css";
 import React from "react";
 
-import unifesoData from "assets/json/unifesoData.json";
-import MainBanner from "components/banners/Main";
-import Login from "components/banners/Login";
-import MenuSuperior from "components/MenuSuperior";
+import unifesoData from "../../assets/json/unifesoData.json";
+import MainBanner from "../../components/banners/Main";
+import Login from "../../components/banners/Login";
+import MenuSuperior from "../../components/MenuSuperior";
 
 export default function FirstAccess({ pageId }) {
   const filteredId = unifesoData.find((data) => data.id === pageId);
@@ -23,13 +23,16 @@ export default function FirstAccess({ pageId }) {
   ];
   return (
     <>
-      <section className={styles.main}>
-        <MainBanner
-          type={filteredBanner("Main", true, false, "anchorHome")}
-          className={styles.mainBanner}
-        />
-        <Login type={filteredBanner("Login", false, false, "anchorHome")} />
-      </section>
+      <MenuSuperior />
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <MainBanner
+            type={filteredBanner("Main", true, false, "anchorHome")}
+            className={styles.mainBanner}
+          />
+          <Login type={filteredBanner("Login", false, false, "anchorHome")} />
+        </div>
+      </div>
     </>
   );
 }

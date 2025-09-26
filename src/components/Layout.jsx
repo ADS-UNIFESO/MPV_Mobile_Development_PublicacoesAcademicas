@@ -1,13 +1,15 @@
 import React from 'react';
 import MenuSuperior from './MenuSuperior';
 import styles from './layout.module.css';
+import { AccessibilityWidget } from 'react-accessibility';
 
 const Layout = ({ children }) => {
   return (
     <>
-      <div className={styles.topBar}>
+      <AccessibilityWidget />
+      <header className={styles.topBar}>
         <MenuSuperior />
-      </div>
+      </header>
       <main>{children}</main>
     </>
   );

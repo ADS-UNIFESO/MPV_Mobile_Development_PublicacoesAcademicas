@@ -17,19 +17,19 @@ export default function Home() {
           <section className={styles.section}>
             <div className={styles.card}>
               <img src="https://www.unifeso.edu.br/editora/images/periodicos.jpg" alt="Periódicos" />
-              <h2>Periódicos</h2>
+              <h3>Periódicos</h3>
               <p>Revistas eletrônicas publicadas periodicamente.</p>
               <a href="https://www.unifeso.edu.br/editora/conteudo.php?c=periodicos" target="_blank" rel="noopener noreferrer">Saiba mais</a>
             </div>
             <div className={styles.card}>
               <img src="https://www.unifeso.edu.br/editora/images/ANAIS.jpg" alt="Anais" />
-              <h2>Anais</h2>
+              <h3>Anais</h3>
               <p>Difusão dos trabalhos apresentados em eventos acadêmicos-científicos.</p>
               <a href="https://www.unifeso.edu.br/editora/conteudo.php?c=anais" target="_blank" rel="noopener noreferrer">Saiba mais</a>
             </div>
             <div className={styles.card}>
               <img src="https://www.unifeso.edu.br/editora/images/SERIES.jpg" alt="Séries" />
-              <h2>Séries</h2>
+              <h3>Séries</h3>
               <p>Difusão da produção acadêmica dos cursos de graduação e pós-graduação.</p>
               <a href="https://www.unifeso.edu.br/editora/categorias.php" target="_blank" rel="noopener noreferrer">Saiba mais</a>
             </div>
@@ -66,8 +66,10 @@ export default function Home() {
           </section>
           <div className={styles.newsletter}>
             <h3>Cadastre-se e receba novidades</h3>
-            <input type="email" placeholder="Seu e-mail" />
-            <button>Assinar</button>
+            <form>
+              <input type="email" placeholder="Seu e-mail" aria-label="Endereço de e-mail para receber novidades" />
+              <button type="submit" aria-label="Assinar newsletter">Assinar</button>
+            </form>
           </div>
           <footer className={styles.footer}>
             UNIFESO © 2025 - Todos os direitos reservados<br />

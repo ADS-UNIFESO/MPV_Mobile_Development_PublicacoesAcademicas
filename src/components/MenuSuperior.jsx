@@ -12,11 +12,16 @@ export default function MenuSuperior() {
   };
   return (
     <nav className={styles.menu}>
-      <div className={styles.hamburger} onClick={() => setOpen(!open)}>
+      <button
+        className={styles.hamburger}
+        onClick={() => setOpen(!open)}
+        aria-label={open ? "Fechar menu" : "Abrir menu"}
+        aria-expanded={open}
+      >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
       <ul className={open ? styles.open : ''}>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/ultimos-artigos">Últimos Artigos</Link></li>

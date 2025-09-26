@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "babel-preset-react-app": "^10.0.1",
     "react": "^18.2.0",
+    "react-accessibility": "^0.13.1",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.20.1",
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@axe-core/react": "^4.10.2"
   }
 }

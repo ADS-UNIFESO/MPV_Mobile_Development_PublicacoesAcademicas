@@ -11,6 +11,13 @@
 
 </br>
 
+- ## Nome do grupo e integrantes:
+## Millennium's Falcon
+- Gabriel Macedo Araujo
+- Marcos Paulo Barker
+- Yuri Ramos
+- Lucas Martins
+
 - ## Atividade: Criar um MVP
 - ## Situação Problema escolhida (resumo): 
 Plataforma web que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso. 

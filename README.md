@@ -14,13 +14,13 @@
 - ## Nome do grupo e integrantes:
 ## Millennium's Falcon
 - Gabriel Macedo Araujo
-- Marcos Paulo Barker
+- Marcos Paulo Marques Corrêa Gomes
 - Yuri Ramos
 - Lucas Martins
 
 - ## Atividade: Criar um MVP
 - ## Situação Problema escolhida (resumo): 
-Plataforma web que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso. 
+Plataforma que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso. 
 
 
 - ## Situação-Problema <br>
@@ -56,7 +56,7 @@ Administração da Editora: A equipe de gestão da Editora será responsável pe
  
 
 - ## Requisitos Não Funcionais
-    - **Compatibilidade**: O sistema deve funcionar corretamente em diferentes navegadores web.
+    - **Compatibilidade**: O sistema deve funcionar corretamente em diferentes formatos de tela.
     - **Responsividade**: A aplicação deve se adaptar a diferentes tamanhos de tela para suportar dispositivos móveis e desktops.
     - **Segurança**: As informações de login dos usuários devem ser armazenadas de forma segura para evitar acessos não autorizados.
     - **Usabilidade**: A interface do usuário deve ser intuitiva e responder rapidamente às ações do usuário.

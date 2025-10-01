@@ -115,13 +115,15 @@ Esta tela apresenta a área principal para colaboradores autenticados da Editora
 ## ♿ Painel de Acessibilidade
 
 <p align="center">
-    <img src="public/images/README/" alt="Painel de Acessibilidade" width="400">
+    <img src="public/images/README/acessibilidade01.jpg" alt="Painel de Acessibilidade" width="400">
 </p>
 
 Esta funcionalidade demonstra o compromisso com a inclusão digital, oferecendo um painel completo de configurações de acessibilidade. Os usuários podem personalizar cores do texto, tamanho da fonte, altura da linha, espaçamento entre letras e formatação do texto. O painel inclui opções para resetar as configurações, garantindo uma experiência acessível para todos os usuários.
 
 <p align="center">
-    <img src="public/images/README/" alt="Painel de Acessibilidade - Configurações Extras" width="400">
+    <img src="public/images/README/acessibilidade02.jpg" alt="Painel de Acessibilidade - Configurações Extras" width="400">
+    <img src="public/images/README/acessibilidade03.jpg" alt="Painel de Acessibilidade - Configurações Extras" width="400">
+    <img src="public/images/README/acessibilidade04.jpg" alt="Painel de Acessibilidade - Configurações Extras" width="400">    
 </p>
 
 O painel também oferece configurações extras como destacar títulos, destacar links, ocultar imagens e modo monocromático (preto e branco), proporcionando uma experiência ainda mais personalizada e acessível.
@@ -131,7 +133,7 @@ O painel também oferece configurações extras como destacar títulos, destacar
 ## 📧 Tela Manter Contato
 
 <p align="center">
-    <img src="public/images/README/" alt="Tela Manter Contato" width="400">
+    <img src="public/images/README/contato.jpg" alt="Tela Manter Contato" width="400">
 </p>
 
 Esta tela apresenta uma publicação específica ("Parque Municipal Natural Montanhas de Teresópolis") com suas informações detalhadas, incluindo organizadores, editora e ISBN. A seção "Cadastre-se e receba novidades" permite que os usuários se inscrevam para receber atualizações por email sobre novas publicações da Editora Unifeso.
@@ -141,7 +143,7 @@ Esta tela apresenta uma publicação específica ("Parque Municipal Natural Mont
 ## 📱 Menu de Navegação
 
 <p align="center">
-    <img src="public/images/README/" alt="Menu de Navegação" width="400">
+    <img src="public/images/README/menuSuspenso.jpg" alt="Menu de Navegação" width="400">
 </p>
 
 Esta tela apresenta o menu de navegação lateral que oferece acesso rápido às principais funcionalidades do sistema para colaboradores logados. O menu inclui opções como Home, Últimos Artigos, Todos os Artigos, Cadastrar Artigo, Cadastro Colaborador e Sair, proporcionando uma navegação intuitiva e organizada.

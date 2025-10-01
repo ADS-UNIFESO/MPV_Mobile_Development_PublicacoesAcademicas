@@ -11,9 +11,16 @@
 
 </br>
 
+- ## Nome do grupo e integrantes:
+## Millennium's Falcon
+- Gabriel Macedo Araujo
+- Marcos Paulo Marques Corrêa Gomes
+- Yuri Ramos
+- Lucas Martins
+
 - ## Atividade: Criar um MVP
 - ## Situação Problema escolhida (resumo): 
-Plataforma web que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso. 
+Plataforma que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso. 
 
 
 - ## Situação-Problema <br>
@@ -49,16 +56,115 @@ Administração da Editora: A equipe de gestão da Editora será responsável pe
  
 
 - ## Requisitos Não Funcionais
-    - **Compatibilidade**: O sistema deve funcionar corretamente em diferentes navegadores web.
+    - **Compatibilidade**: O sistema deve funcionar corretamente em diferentes formatos de tela.
     - **Responsividade**: A aplicação deve se adaptar a diferentes tamanhos de tela para suportar dispositivos móveis e desktops.
     - **Segurança**: As informações de login dos usuários devem ser armazenadas de forma segura para evitar acessos não autorizados.
     - **Usabilidade**: A interface do usuário deve ser intuitiva e responder rapidamente às ações do usuário.
     - **Desempenho**: O sistema deve ser capaz de gerenciar um número razoável de agendamentos de forma eficiente.
    
 </br>
+
+## 🚀 Aplicação
+
+Acesse a aplicação em: https://mpv-mobile-development-publicacoes.vercel.app/
+
+<p align="center">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://mpv-mobile-development-publicacoes.vercel.app/" alt="QR Code - Acesso à Aplicação" width="200">
+</p>
+
+<p align="center"><em>Escaneie o QR Code para acessar a aplicação diretamente no seu dispositivo móvel</em></p>
+
+</br>
+
 <h1 align="center">
     Telas do Sistema
 </h1>
+
+</br>
+
+## 🏠 Tela Home - Usuário Deslogado
+
+<p align="center">
+    <img src="public/images/home-deslogado.png" alt="Tela Home - Usuário Deslogado" width="600">
+</p>
+
+Esta tela apresenta as opções de entrada para o sistema, permitindo que o usuário escolha entre entrar como colaborador ou como visitante. A interface mostra um design limpo e intuitivo com botões claramente identificados para cada tipo de acesso.
+
+</br>
+
+## 🔐 Tela de Login
+
+<p align="center">
+    <img src="public/images/tela-login.png" alt="Tela de Login" width="400">
+</p>
+
+Esta tela apresenta o formulário de login para colaboradores, com campos para email e senha. A interface inclui um link para recuperação de senha ("Esqueceu sua senha?") e um botão "ENTRAR" para acessar o sistema.
+
+</br>
+
+## 🏛️ Tela Home - Colaborador Logado
+
+<p align="center">
+    <img src="public/images/home-profissional.png" alt="Tela Home - Colaborador Logado" width="400">
+</p>
+
+Esta tela apresenta a área principal para colaboradores autenticados da Editora Unifeso. A interface exibe informações sobre o portal, destacando o objetivo de ampliar o alcance da produção do conhecimento científico, tecnológico e de inovação gerada no UNIFESO. A seção "PERIÓDICOS" permite acesso às revistas eletrônicas publicadas periodicamente.
+
+</br>
+
+## ♿ Painel de Acessibilidade
+
+<p align="center">
+    <img src="public/images/painel-acessibilidade.png" alt="Painel de Acessibilidade" width="400">
+</p>
+
+Esta funcionalidade demonstra o compromisso com a inclusão digital, oferecendo um painel completo de configurações de acessibilidade. Os usuários podem personalizar cores do texto, tamanho da fonte, altura da linha, espaçamento entre letras e formatação do texto. O painel inclui opções para resetar as configurações, garantindo uma experiência acessível para todos os usuários.
+
+<p align="center">
+    <img src="public/images/painel-acessibilidade-extra.png" alt="Painel de Acessibilidade - Configurações Extras" width="400">
+</p>
+
+O painel também oferece configurações extras como destacar títulos, destacar links, ocultar imagens e modo monocromático (preto e branco), proporcionando uma experiência ainda mais personalizada e acessível.
+
+</br>
+
+## 📧 Tela Manter Contato
+
+<p align="center">
+    <img src="public/images/tela-manter-contato.png" alt="Tela Manter Contato" width="400">
+</p>
+
+Esta tela apresenta uma publicação específica ("Parque Municipal Natural Montanhas de Teresópolis") com suas informações detalhadas, incluindo organizadores, editora e ISBN. A seção "Cadastre-se e receba novidades" permite que os usuários se inscrevam para receber atualizações por email sobre novas publicações da Editora Unifeso.
+
+</br>
+
+## 📱 Menu de Navegação
+
+<p align="center">
+    <img src="public/images/submenu.png" alt="Menu de Navegação" width="400">
+</p>
+
+Esta tela apresenta o menu de navegação lateral que oferece acesso rápido às principais funcionalidades do sistema para colaboradores logados. O menu inclui opções como Home, Últimos Artigos, Todos os Artigos, Cadastrar Artigo, Cadastro Colaborador e Sair, proporcionando uma navegação intuitiva e organizada.
+
+</br>
+
+## 📝 Cadastro de Novo Artigo
+
+<p align="center">
+    <img src="public/images/cadastro-novo-artigo.png" alt="Cadastro de Novo Artigo" width="400">
+</p>
+
+Esta tela apresenta o formulário para cadastro de novos artigos pelos colaboradores. O formulário inclui campos para título, autor, resumo e upload de arquivo, permitindo que os administradores adicionem novas publicações à plataforma de forma simples e organizada. Atende ao requisito funcional de Sistema de Cadastro de Publicações.
+
+</br>
+
+## 👤 Cadastro de Colaborador
+
+<p align="center">
+    <img src="public/images/cadastro-colaborador.png" alt="Cadastro de Colaborador" width="400">
+</p>
+
+Esta tela apresenta o formulário para cadastro de novos colaboradores no sistema. O formulário inclui campos essenciais como nome, email e senha, permitindo que administradores criem contas para novos colaboradores que poderão acessar e gerenciar publicações na plataforma. Esta funcionalidade é fundamental para o controle de acesso do sistema.
 
 </br>
 
